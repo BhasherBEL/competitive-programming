@@ -1,7 +1,9 @@
-class SegmentTree(object):
-    def __init__(self, array, fn, default=0):
-        self.size = len(array)
-        self.tree = [default] * self.size + array
+import generic
+
+class SegmentTree(generic.SegmentTree):
+    def __init__(self, arr, fn, default=0):
+        self.size = len(arr)
+        self.tree = [default] * self.size + arr
         self.fn = fn
         self.default = default
         
