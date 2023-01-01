@@ -2,7 +2,9 @@ class MinHeap(object):
     def __init__(self, arr):
         self.size = len(arr)
         self.arr: list = arr
-        # TODO
+        for i in range(self.size//2, 0, -1):
+            self.heapifyUp(i-1)
+            self.heapifyDown(i-1)
 
     def push(self, x):
         self.arr.append(x)
@@ -19,7 +21,7 @@ class MinHeap(object):
         self.heapifyDown(0)
         return item
     
-    def pushpop(self, x):
+    def poppush(self, x):
         item = self.arr[0]
         self.arr[0] = x
         self.heapifyDown(0)
@@ -38,13 +40,9 @@ class MinHeap(object):
             self.arr[i], self.arr[j] = self.arr[j], self.arr[i]
             i = j
 
+
 if __name__ == '__main__':
-    pq = MinHeap([])
-    pq.push(2) 
-    pq.push(1) 
-    pq.push(3) 
-    pq.push(0) 
-    pq.push(4)
-    pq.pushpop(7)
+    pq = MinHeap([6, 2, 8, 3, 1, 9])
+    print(pq.arr)
     print(pq.pop())
     print(pq.arr)

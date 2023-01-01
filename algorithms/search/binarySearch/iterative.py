@@ -4,7 +4,6 @@ def binarySearch(data, key):
 
     while l != r:
         m = (l+r)//2
-        # print(data[l:r+1], l, r, m, data[m], key)
         if data[m] < key:
             l = m+1
         elif data[m] > key:
