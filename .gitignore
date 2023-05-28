@@ -1,2 +1,5 @@
 __pycache__/
 experiment/
+.ipynb_checkpoints/
+*.ipynb
+cache/
