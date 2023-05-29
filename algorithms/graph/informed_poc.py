@@ -12,6 +12,8 @@ if __name__ == '__main__':
     D = ox.graph_from_point((50.66992, 4.61528), dist=1000, network_type="bike", simplify=True)
     G = ox.utils_graph.get_digraph(D)
 
+    ox.graph_from_xml
+
     def get_h_dist(x, y):
         X = G.nodes[x]
         Y = G.nodes[y]
