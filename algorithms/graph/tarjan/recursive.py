@@ -27,6 +27,7 @@ def tarjan(root, get_neighbors):
 
     return bridges
 
+
 if __name__ == '__main__':
     neighbors = {
         'A': ['B', 'C', 'D', 'E'],
